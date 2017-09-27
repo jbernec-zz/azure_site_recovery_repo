@@ -29,7 +29,7 @@ New-HyperVASRDeployment
 
 Param(
 [String]$ResourceGroupName = "RGASR",
-[String]$SubscriptionName = "Free Trial",
+[String]$SubscriptionName = "Trial",
 [String]$Location = "southcentralus",
 [String]$ServerFriendlyName = "WS2016",
 [String]$StorageAccountName = "storeasr18"
