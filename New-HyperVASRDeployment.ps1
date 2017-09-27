@@ -27,11 +27,11 @@ New-HyperVASRDeployment
 /#>
 
 Param(
-[String]$ResourceGroupName = "RGRecovery",
+[String]$ResourceGroupName = "RGASR",
 [String]$SubscriptionName = "Free Trial",
 [String]$Location = "southcentralus",
 [String]$ServerFriendlyName = "WS2016",
-[String]$StorageAccountName = "storeasr0518"
+[String]$StorageAccountName = "storeasr18"
 )
 
 #region Azure Logon
