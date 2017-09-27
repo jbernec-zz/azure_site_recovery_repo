@@ -5,9 +5,11 @@ PowerShell Function to automate Azure Site Recovery deployment workflows for Hyp
 PowerShell Function to automate Azure Site Recovery deployment workflows for Hyper-V VMs to Azure in a non-VMM environment.
 This function was tested using a WS2016 Virtual Machine configured as a Hyper-V Host using Nested Virtualization.
 https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-deploy-with-powershell-resource-manager.
-Prerequisites: 1) Ensure that the Install-ASRProvider.psm1 module is present on the local host machine. 2) Copy the ".\AzureSiteRecoveryProvider.exe"
-file to a local folder on the Hyper-V host that matches the $Path variable value in the Install-ASRProvider.psm1 module. 3) Ensure internet access is available.
-4) An Azure automation account will have to be provisioned. This function was developed to run as a Runbook or locally. It authenticates to azure using an Azure RunAsAccount.  
+Prerequisites: 
+1) The Install-ASRProvider.psm1 module must be copied to the PowerShell modules folder on the local host machine.If the solution is deployed as a runbook, this module will need imported into the Automation account module folder.
+2) The Install-ASRProvider.psm1 module also downloads the ".\AzureSiteRecoveryProvider.exe" file from "https://aka.ms/downloaddra"(Microsoft could change this link at anytime) to a local folder on the Hyper-V host that matches the $Path variable value in the Install-ASRProvider.psm1 module.
+3) Ensure internet access is available.
+4) An Azure automation account will have to be provisioned. This function was developed to run as a Runbook or locally. It authenticates to azure using an Azure RunAsAccount.
 .PARAMETER SubscriptionName
 Subscription name of the Recovery Vault infrastructure.
 .PARAMETER Location
