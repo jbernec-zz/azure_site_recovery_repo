@@ -32,7 +32,8 @@ Param(
     )
     
 [string]$ScriptPath = Split-Path (get-variable myinvocation -scope script).value.Mycommand.Definition -Parent
-#Download credential file
+#Download  site recovery provider file and credential file
+Invoke-WebRequest -Uri "https://aka.ms/downloaddra" -OutFile "c:\ars\AzureSiteRecoveryProvider.exe"
 $Path = "C:\ARS\" 
 $CredsFile = Get-AzureRmRecoveryServicesVaultSettingsFile -Vault $Vault -SiteIdentifier $SiteIdentifier -SiteFriendlyName $SiteName -Path $Path
 $CredsFile.FilePath
