@@ -1,7 +1,7 @@
 # AzureSiteRecovery
 PowerShell Function to automate Azure Site Recovery deployment workflows for Hyper-V VMs to Azure in a non-VMM environment.
 
-Steps to Testing the New-HyperVASRDeploymentv2.ps1 ASR deployment function.
+Steps to Testing the New-HyperVASRDeploymentv.ps1 ASR deployment function.
 
 1) Run the Remove-OrphanedVMReplication.ps1 to disable existing VM replication settings on the protected VM(s):
  .\Remove-OrphanedVMReplication.ps1 -VMName w10
