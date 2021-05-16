@@ -1,4 +1,4 @@
-# AzureSiteRecovery
+# Azure Site Recovery Implementations
 PowerShell Function to automate Azure Site Recovery deployment workflows for Hyper-V VMs to Azure in a non-VMM environment.
 
 Steps to Testing the New-HyperVASRDeploymentv.ps1 ASR deployment function.
